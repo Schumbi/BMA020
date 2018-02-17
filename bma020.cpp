@@ -82,8 +82,6 @@ bool BMA020::update_acc(BMA020::raw_acc_t& data)
     int16_t acc_y = getACCfromBytes(acc_regs[2], acc_regs[3]);
     int16_t acc_z = getACCfromBytes(acc_regs[4], acc_regs[5]);
 
-    auto half = (1 << 9);
-
     this->_raw_data.acc_x = acc_x;
     this->_raw_data.acc_y = acc_y;
     this->_raw_data.acc_z = acc_z;
